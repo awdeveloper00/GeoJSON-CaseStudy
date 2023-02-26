@@ -10,12 +10,15 @@ export default function CordinateForm({ setGeojson, setLoader }) {
   const onPressHandeler = async (val) => {
     setLoader(true);
     try {
+      //Validating InputValues
       validateBoundingBox(val);
       const data = await fetchOpenStreetMapData(val);
+      //If Api Call is Success(200)
       const GeoJsonData = OsmToGeoJsonConverter(data);
       setLoader(false);
       setGeojson(GeoJsonData);
     } catch (error) {
+      //If Api Call is UnSuccessful(400)
       setLoader(false);
       setGeojson({ error: error.response.data });
     }
@@ -23,6 +26,7 @@ export default function CordinateForm({ setGeojson, setLoader }) {
   const ValidateForm = yup.object(FormValidation);
 
   return (
+    //FormHandling through formik and valdation
     <div className="formContainer">
       <div className="form" data-testid="form">
         <Formik

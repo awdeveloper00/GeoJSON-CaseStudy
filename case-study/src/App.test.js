@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("Testing location form is created", () => {
+test("GeoJsonApp", () => {
   render(<App />);
 
   const form = screen.getByTestId("form");

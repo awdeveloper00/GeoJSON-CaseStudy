@@ -1,5 +1,5 @@
 import * as yup from "yup";
-
+//Form Validation
 export const FormValidation = {
   minLon: yup.string().required("Minimum Longitude is required"),
 
@@ -9,7 +9,7 @@ export const FormValidation = {
 
   maxLat: yup.string().required("Maximum Latitude is required"),
 };
-
+//Data Validation
 export function validateBoundingBox(val) {
   if (
     val.minLon < -180 ||

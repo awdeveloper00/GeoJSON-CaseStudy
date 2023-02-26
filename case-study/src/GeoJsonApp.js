@@ -9,7 +9,7 @@ const GeoJsonMap = () => {
   return (
     <div>
       <CordinateForm setGeojson={setGeojson} setLoader={setLoader} />
-
+      {/* Table Render's when Form filled and Api Call is 200 */}
       <GeoJson data={geojson} loader={loader} />
     </div>
   );
