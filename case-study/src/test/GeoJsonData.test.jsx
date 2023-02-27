@@ -29,7 +29,9 @@ describe('OSM Data Converted to GEOJSON', () => {
 
 
     clickSubmit();
+    
     render(<GeoJson/>);
+
 
      waitFor(() => {
       expect( screen.getByRole('table')).toBeInTheDocument();

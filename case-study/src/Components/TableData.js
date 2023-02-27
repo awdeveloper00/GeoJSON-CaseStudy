@@ -4,7 +4,7 @@ export default function TableData({ data }) {
   return (
     <div className="d-flex justify-content-center py-5 ">
       <table
-        class="table  table-hover table-responsive"
+        className="table  table-hover table-responsive"
         data-testid="table"
         role={"table"}
       >

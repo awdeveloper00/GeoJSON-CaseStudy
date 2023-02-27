@@ -1,3 +1,4 @@
+import "leaflet/dist/leaflet.css";
 import "./App.css";
 import GeoJsonMap from "./GeoJsonApp";
 
