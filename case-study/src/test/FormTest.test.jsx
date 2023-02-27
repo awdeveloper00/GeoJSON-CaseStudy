@@ -1,5 +1,5 @@
 import React from 'react';
-import { render,  screen,  } from '@testing-library/react';
+import { act, render,  screen,  } from '@testing-library/react';
 import user from '@testing-library/user-event';
 
 
@@ -12,13 +12,14 @@ it('Inputs Are Rendered', async() => {
 
       
     render( <CordinateForm />);
-    expect(getMinimumLongitude()).toBeInTheDocument();
-    expect(getMinimumLatitude()).toBeInTheDocument()
-    expect(getMaximumLongitude()).toBeInTheDocument();
-    expect(getMaximumLatitude()).toBeInTheDocument();
+
+      expect(getMinimumLongitude()).toBeInTheDocument();
+      expect(getMinimumLatitude()).toBeInTheDocument()
+      expect(getMaximumLongitude()).toBeInTheDocument();
+      expect(getMaximumLatitude()).toBeInTheDocument();
+    })
    
   
-  });
   it('Minimum Longitude must be less than Maximum Longitude', async() => {
 
       
@@ -30,6 +31,7 @@ it('Inputs Are Rendered', async() => {
  
     clickSubmit();
 
+    
   });
   });
 
